@@ -9,6 +9,7 @@ const store = new Vuex.Store({
   state: {
     isMobile:false,
     activeRoute:'首页',
+    CurSiderMenu:'首页',
     open:false,
     docked: true,
     userInfo:{},

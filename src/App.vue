@@ -8,9 +8,9 @@
           </h2>
           </div>
           <div :class="{'content_right':open}">
-            <div class="header">
+          <div class="header" style="width: 100%">
+            <!-- <div class="header" :style="{width: open?'calc(100% - 150px)':'100%'}"> -->
               <Header/>
-            <!-- <Button type="primary" @click="toggle()">头部</Button> -->
             </div>
             <div class="body">
               <transition>
@@ -114,6 +114,8 @@ $width: 150px;
 }
 @media (min-width: 769px) {
   .content_left{
+    position: fixed;
+    top: 0;
     background-color: #fff;
     width: $width;
     float: left;
@@ -129,14 +131,17 @@ $width: 150px;
 }
 
 .header{
+  position: fixed;
+  top: 0;
   background-color: white;
   height: 40px;
+  z-index: 999;
 }
 
 .body{
-  min-height: 500px;
   background-color: white;
-  margin: 20px 5px;
+  margin: 60px 10px 20px 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
 }
 
 .footer{

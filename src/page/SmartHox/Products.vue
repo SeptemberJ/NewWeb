@@ -1,5 +1,5 @@
 <template>
-    <div class="ApplicationScene">
+    <div class="Products">
         <!-- banner -->
        <!--  <Carousel v-model="value2" dots="none" arrow="never">
             <CarouselItem>
@@ -13,29 +13,26 @@
         <div class="TabHead">
             <span v-for="(Tab,Idx) in TabHeadList" :class="{'CursorPointer':true,'tabActive':CurTab == Tab}" @click="ChangeTab(Tab)">{{Tab}}</span>
         </div>
-
         <div>
-            <Community v-if="CurTab == '智能社区'"/>
-            <Hotel v-if="CurTab == '智慧酒店'"/>
-            <Agriculture v-if="CurTab == '智能农业'"/>
-            <Industry v-if="CurTab == '智慧工业'"/>
-            <Environmental v-if="CurTab == '智慧环保'"/>
+            <DeviceAccess v-if="CurTab == '设备接入'"/>
+            <NetHardware v-if="CurTab == '联网模块'"/>
+            <OperationCenter v-if="CurTab == '运营中心'"/>
+            <DataCenter v-if="CurTab == '数据中心'"/>
         </div>
-        
     </div>
 </template>
 <script>
-import Community from '../../components/SmartHox/Tab/ApplicationScene/Community'
-import Hotel from '../../components/SmartHox/Tab/ApplicationScene/Hotel'
-import Agriculture from '../../components/SmartHox/Tab/ApplicationScene/Agriculture'
-import Industry from '../../components/SmartHox/Tab/ApplicationScene/Industry'
-import Environmental from '../../components/SmartHox/Tab/ApplicationScene/Environmental'
+import DeviceAccess from '../../components/SmartHox/Tab/Products/DeviceAccess'
+import NetHardware from '../../components/SmartHox/Tab/Products/NetHardware'
+import OperationCenter from '../../components/SmartHox/Tab/Products/OperationCenter'
+import DataCenter from '../../components/SmartHox/Tab/Products/DataCenter'
+
+
   export default{
     data: function () {
       return {
-        value2:0,
-        CurTab:'智能社区',
-        TabHeadList:['智能社区','智慧酒店','智能农业','智慧工业','智慧环保']
+        CurTab:'设备接入',
+        TabHeadList:['设备接入','联网模块','运营中心','数据中心']
       }
     },
     mounted: function () {
@@ -51,12 +48,10 @@ import Environmental from '../../components/SmartHox/Tab/ApplicationScene/Enviro
       
     },
     components: {
-        Community,
-        Hotel,
-        Agriculture,
-        Industry,
-        Environmental
-      
+        DeviceAccess,
+        NetHardware,
+        OperationCenter,
+        DataCenter
 
     },
     methods: {
@@ -70,14 +65,14 @@ import Environmental from '../../components/SmartHox/Tab/ApplicationScene/Enviro
 </script>
 <style lang="scss">
 $TabHeight: 30px;
-.ApplicationScene{
+.Products{
     .TabHead{
         width: 100%;
         overflow: visible;
         height: $TabHeight;
         background-color: #fff;
         span{
-            width: 20%;
+            width: 25%;
             height: 100%;
             display: inline-block;
             border-right: 2px solid #eee;

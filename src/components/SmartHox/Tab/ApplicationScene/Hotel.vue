@@ -1,19 +1,19 @@
 <template>
     <div class="Hotel">
         <div class="TextCenter">
-            <h2 class="TextLeft">物联网酒店系统构成</h2>
+            <h1 class="TextLeft">物联网酒店系统构成</h1>
             <div class="SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon7.png">
             </div>
-            <h2 class="TextLeft">智慧客房构成</h2>
+            <h1 class="TextLeft">智慧客房构成</h1>
             <div class="SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon8.png">
             </div>
-            <h2 class="TextLeft">物联网酒店系统功能介绍</h2>
+            <h1 class="TextLeft">物联网酒店系统功能介绍</h1>
         </div>
         <Row type="flex" justify="space-between" class="code-row-bg marginTB_40" :gutter="16">
-            <Col class="marginB_20" :xs="24" :sm="12" :md="8" :lg="6" v-for="(Introduction,Idx) in IntroductionList">
-                <div class="Padding_10"  style="">
+            <Col class="marginB_20" :xs="24" :sm="12" :md="8" :lg="8" v-for="(Introduction,Idx) in IntroductionList">
+                <div style="min-height: 200px;" class="Padding_10">
                     <h3>{{Introduction.title}}</h3>
                     <p class="marginTB_20">{{Introduction.content}}</p>
                 </div>
@@ -36,7 +36,7 @@
             {'title':'客房空气质量调节','content':'入睡后，如果二氧化碳浓度过高，系统自动开启排风或新风调节；PM2.5过高，系统自动开启窗户和排风扇或空气净化器；客房保持恒温、恒湿状态。实时监测入住期间的客房环境：温度、湿度、粉尘颗粒、二氧化碳。'},
             {'title':'体验式购物-开启最佳盈利模式','content':'酒店购物最佳商品：需要长时间体验产品、批发零售价格差大、零售价格大众有认知；为什么可以做到低价：无销售人员、无场地费、无渠道差；酒店增值利润极大！'},
             {'title':'手机自助续房、退房','content':'传统酒店：续房平均至少需要3分钟；高峰期更是长达十余分钟，客人感知极差……紫光物联智能酒店，秒续；节约3分钟，带来的是客人感知大幅提升；节约3分钟，带来的是服务人员效率大幅提升；办完事情，无需回酒店，拿出手机退房，直接去机场走人，节约3个小时'},
-            {'title':'Hox 物联物联网酒店对投资人的六大价值','content':'一、物联网酒店能够提高客人的首选率；全部客户转化为会员；增加客户粘性（回头率）；节约前台人工成本（降低服务成本）；房间产品的营销（带动体验式购物）；大数据价值巨大。'},
+            {'title':'Hox 物联物联网酒店对投资人的六大价值','content':'一、物联网酒店能够提高客人的首选率；全部客户转化为会员；增加客户粘性（回头率）；节约前台人工成本（降低服务成本）；房间产品的营销（带动体验式购物）；大数据价值巨大。'}
         ]
       }
     },

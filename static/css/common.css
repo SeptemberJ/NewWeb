@@ -1,56 +1,59 @@
 /*@import '//fonts.useso.com/css?family=Roboto:300,400,500,700,400italic';
 @import 'http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css';*/
 html,body{  
-height: 100% !important;  
+	height: 100% !important;  
 }
 img{
-display: inline-block !important;  
+	display: inline-block !important;  
 }
 .mu-drawer{
-width: 150px !important;  
+	width: 150px !important;  
 }
 #app,.com-app{
-height: 100% !important;  
-margin: 0 auto;
+	height: 100% !important;  
+	margin: 0 auto;
 }
 .selfAdaptionWrap{
-display: flex;
-flex-direction:row;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
 }
 .fontSizeSmall{
-font-size: 14px;
+	font-size: 14px;
 }
 
 
 /*color*/
 .colorRed{
-color: #ff150e;
+	color: #ff150e;
 }
 .colorWhite{
-color: #fff;
+	color: #fff;
 }
 .colorOrange{
-color: #FF7800;
+	color: #FF7800;
 }
 .colorLightBlack{
-color: #6d7380;
+	color: #6d7380;
 }
 .colorGray{
-color: #989898;
+	color: #989898;
 }
 
 
 /*background*/
 .lightBlue{
-background-color: #F3F8FE;
+	background-color: #F3F8FE;
 }
 .Bg_blue{
     background-color: rgb(68,114,196) !important;
 }
-.Bg_orangr{
+.Bg_gray{
+    background-color: rgb(124,124,124) !important;
+}
+.Bg_orange{
     background-color: rgb(237,125,49);
 }
 
@@ -60,64 +63,73 @@ background-color: #F3F8FE;
 
 /*textalign*/
 .TextCenter{
-text-align: center;
+	text-align: center;
 }
 .TextLeft{
-text-align: left;
+	text-align: left;
 }
 .TextRight{
-text-align: right;
+	text-align: right;
 }
 .textIndent{
-text-indent:20px;
+	text-indent:20px;
 }
 
 
 /*margin*/
 .marginT_10{
-margin-top: 10px;
+	margin-top: 10px;
 }
 .marginT_20{
-margin-top: 20px;
+	margin-top: 20px;
 }
 .marginTB_10{
-margin: 10px auto;
+	margin: 10px auto;
 }
 .marginTB_20{
-margin: 20px auto;
+	margin: 20px auto;
 }
 .marginB_20{
-margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .marginB_10{
-margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .marginT_20{
-margin-top: 20px;
+	margin-top: 20px;
 }
 .marginTB_40{
-margin: 40px auto;
+	margin: 40px auto;
+}
+.marginT_40{
+	margin-top: 40px;
 }
 .marginB_40{
-margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 .marginL_20{
-margin-left: 20px;
+	margin-left: 20px;
 }
 .marginL_10{
-margin-left: 10px;
+	margin-left: 10px;
 }
 .marginR_10{
-margin-right: 10px;
+	margin-right: 10px;
 }
 .margin_auto{
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 
 /*padding*/
 .Padding_10{
-padding: 10px;
+	padding: 10px;
+}
+.Padding_20{
+	padding: 20px;
+}
+.PaddingLR_20{
+	padding: 0 20px;
 }
 
 
@@ -133,21 +145,21 @@ padding: 10px;
 display: block;
 }
 .InlineBlock{
-display: inline-block;
+	display: inline-block;
 }
 .FloatLeft{
-clear: both;
-float: left;
+	clear: both;
+	float: left;
 }
 .WidthFull{
-width: 100% !important;
+	width: 100% !important;
 }
 .Bold{
-font-weight: bold;
+	font-weight: bold;
 }
 
 .CursorPointer{
-cursor: pointer;
+	cursor: pointer;
 }
 
 
@@ -162,4 +174,7 @@ text-align: center;
 .ivu-card-body{
 margin-top: 20px;
 /*padding: 0px !important;*/
+}
+.OneBlock{
+	margin: 40px auto;
 }

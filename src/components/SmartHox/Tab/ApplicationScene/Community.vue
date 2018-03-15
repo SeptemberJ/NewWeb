@@ -2,7 +2,7 @@
     <div class="Community">
         <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
             <Col class="marginB_20" :xs="24" :sm="12" :md="6" :lg="6" v-for="(Block,Idx) in BlockInfo">
-                <div class="Bg_blue Padding_10 colorWhite TextCenter">
+                <div style="height: 100%;" class="Bg_blue Padding_10 colorWhite TextCenter">
                     <h3>{{Block.title}}</h3>
                     <p class="marginTB_20">{{Block.content}}</p>
                     <img :src="Block.img">
@@ -37,9 +37,9 @@
       return {
         BlockInfo:[
             {'title':'智能家居','content':'家庭安防、智能控制、语音控制物业服务与生活服务网络化','img':'static/img/Icon/SmartHox_home_icon5.png',},
-            {'title':'社区管理','content':'业主、物业服务、社区系统、生活商圈管理一体化、智能化','img':'static/img/Icon/SmartHox_ApplicationScene_icon2.png',},
-            {'title':'生活服务','content':'商城管理、商品管理、订单管理、O2O生活服务全线打通','img':'static/img/Icon/SmartHox_ApplicationScene_icon3.png',},
-            {'title':'社交','content':'小区业主社交平台，支持通讯录、群组、多媒体消息聊天等社交功能','img':'static/img/Icon/SmartHox_ApplicationScene_icon4.png',},
+            {'title':'社区管理','content':'业主、物业服务、社区系统、生活商圈管理一体化、智能化','img':'static/img/Icon/SmartHox_home_icon6.png',},
+            {'title':'生活服务','content':'商城管理、商品管理、订单管理、O2O生活服务全线打通','img':'static/img/Icon/SmartHox_home_icon7.png',},
+            {'title':'社交','content':'小区业主社交平台，支持通讯录、群组、多媒体消息聊天等社交功能','img':'static/img/Icon/SmartHox_home_icon8.png',}
         ]
       }
     },
@@ -69,7 +69,7 @@
 .Community{
     margin: 40px 20px;
     .SingleImg img{
-        max-width: 80%;
+        max-width: 95%;
     }
 }
 </style>

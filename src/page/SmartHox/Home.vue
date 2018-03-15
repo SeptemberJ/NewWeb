@@ -1,6 +1,7 @@
 <template>
     <div class="SmartHox_home">
-        <div class="BlockOuter">
+    <Carousel/>
+        <!-- <div class="BlockOuter">
             <h2>全系列物联网接入网关</h2>
             <p>Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，
     全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。</p>
@@ -29,7 +30,7 @@
                     </div>
                 </Col>
             </Row>
-        </div>
+        </div> -->
         <!-- three block -->
         <Row style="background-color: rgb(89,89,89);padding-top: 10px;padding-bottom: 10px;color: #fff;">
             <Col span="8" class="TextCenter">
@@ -141,7 +142,7 @@
                     </div>
                   </Col>
                   <Col :xs="12" :sm="8" :md="8" :lg="8">
-                    <div class="TransformBox Bg_orangr">
+                    <div class="TransformBox Bg_orange">
                       <div  class="TransformBox_reverse">
                         <h3>Smart Hox为您提供</h3>
                         <ul>
@@ -161,7 +162,7 @@
     </div>
 </template>
 <script>
-
+import Carousel from '../../components/Carousel/Carousel2'
   export default{
     data: function () {
       return {
@@ -184,6 +185,7 @@
       
     },
     components: {
+      Carousel
       
 
     },

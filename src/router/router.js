@@ -4,6 +4,8 @@ import Store from '../store/store'
 import App from '../app'
 import SmartHox_Home from '../page/SmartHox/Home'
 import SmartHox_ApplicationScene from '../page/SmartHox/ApplicationScene'
+import SmartHox_Products from '../page/SmartHox/Products'
+import Company from '../page/SmartHox/Company'
 import {deviceInfo} from "../util/device"
 Vue.use(VueRouter)
 
@@ -12,9 +14,11 @@ const routes = [
     path: '/',
     component: App,
     children: [
-    {path:'/SmartHox_Home',name: 'SmartHox_Home', component: SmartHox_Home},
+    {path:'/SmartHox_Home',name: '首页', component: SmartHox_Home},
     {path:'/SmartHox_ApplicationScene',name: '物联网场景应用', component: SmartHox_ApplicationScene},
-    {path:'*', redirect: '/SmartHox_ApplicationScene'}
+    {path:'/SmartHox_Products',name: '产品与服务', component: SmartHox_Products},
+    {path:'/Company',name: '公司', component: Company},
+    {path:'*', redirect: '/SmartHox_Home'}
       // {path: '/article/:id', name: 'article', component: Article},
     ]
   }

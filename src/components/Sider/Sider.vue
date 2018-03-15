@@ -1,22 +1,52 @@
 <template>
-  <Menu :theme="theme3" active-name="1">
-      <MenuGroup title="">
-          <MenuItem name="1" class="marginB_20">
-              <Icon size="24" type="document-text"></Icon>
-              <h4>物联网场景应用</h4>
-          </MenuItem>
-          <MenuItem name="2" class="marginB_20">
-              <Icon size="24" type="document-text"></Icon>
-              <h4>产品与服务</h4>
-              
-          </MenuItem>
-          <MenuItem name="3" class="marginB_20">
-              <Icon size="24" type="document-text"></Icon>
-              <h4>公司</h4>
-              
-          </MenuItem>
-      </MenuGroup>
-  </Menu>
+  <div>
+    <div class="desktop">
+      <Menu :theme="theme3" :active-name="CurSiderMenu" @on-select="ChangeSiderMenu">
+          <MenuGroup title="">
+               <MenuItem name="首页" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>首页</p>
+              </MenuItem>
+              <MenuItem name="物联网场景应用" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>物联网场景应用</p>
+              </MenuItem>
+              <MenuItem name="产品与服务" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>产品与服务</p>
+                  
+              </MenuItem>
+              <MenuItem name="公司" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>公司</p>
+              </MenuItem>
+          </MenuGroup>
+      </Menu>
+    </div>
+    <div class="tablet">
+      <Menu :theme="theme3" :active-name="CurSiderMenu" @on-select="ChangeSiderMenu2">
+          <MenuGroup title="">
+               <MenuItem name="首页" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>首页</p>
+              </MenuItem>
+              <MenuItem name="物联网场景应用" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>物联网场景应用</p>
+              </MenuItem>
+              <MenuItem name="产品与服务" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>产品与服务</p>
+                  
+              </MenuItem>
+              <MenuItem name="公司" class="marginB_20">
+                  <Icon size="24" type="document-text"></Icon>
+                  <p>公司</p>
+              </MenuItem>
+          </MenuGroup>
+      </Menu>
+    </div>
+  </div>
   <!-- <Menu class="TextLeft" active-name="" :open-names="['']">
         <Submenu name="1">
             <template slot="title">
@@ -52,6 +82,9 @@
       
     },
     computed: {
+      CurSiderMenu(){
+        return this.$store.state.CurSiderMenu
+      }
       
     },
     watch: {
@@ -62,12 +95,40 @@
 
     },
     methods: {
+      ChangeSiderMenu(Menu){
+        this.$store.state.CurSiderMenu = Menu
+        this.$router.push({name:Menu})
+        //this.ToggleSider()
+      },
+      ChangeSiderMenu2(Menu){
+        this.$store.state.CurSiderMenu = Menu
+        this.$router.push({name:Menu})
+        this.ToggleSider()
+      },
+      ToggleSider (flag) {
+          this.$store.state.open = !this.$store.state.open
+      },
      
 
     }
   }
 </script>
 <style lang="scss">
+.desktop{
+  display: none;
+}
+.tablet{
+  display: inline-block;
+}
+@media (min-width: 769px) {
+  .desktop{
+    display: inline-block;
+  }
+  .tablet{
+    display: none !important;
+  }
+
+}
 .ivu-menu-item-group-title{
   background-repeat: no-repeat;
   background-position-x: center;
