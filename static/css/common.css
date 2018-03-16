@@ -48,13 +48,15 @@ img{
 	background-color: #F3F8FE;
 }
 .Bg_blue{
-    background-color: rgb(68,114,196) !important;
+	background-color: #3E4095;
+    /*background-color: rgb(68,114,196) !important;*/
 }
 .Bg_gray{
     background-color: rgb(124,124,124) !important;
 }
 .Bg_orange{
-    background-color: rgb(237,125,49);
+	background-color: #F58733;
+    /*background-color: rgb(237,125,49);*/
 }
 
 
@@ -130,6 +132,9 @@ img{
 }
 .PaddingLR_20{
 	padding: 0 20px;
+}
+.PaddingTB_40{
+	padding: 40px 0;
 }
 
 

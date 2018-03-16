@@ -73,7 +73,10 @@
 .HeadBlock{
     height: 52px;
     padding: 0 5px;
+    background-color: #000;
+    /*
     background-color: #474a4f;
+    */
     .center-left{
         float: left;
     }

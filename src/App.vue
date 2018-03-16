@@ -96,10 +96,13 @@ $width: 150px;
 }
 
 .content_left{
+  position: fixed;
   width: $width;
   height: 100%;
   background-color: #fff;
+  /*
   position: absolute;
+  */
   top: 0px;
   left: 0px;
   z-index: 999999;

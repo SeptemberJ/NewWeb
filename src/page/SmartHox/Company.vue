@@ -80,14 +80,14 @@ $TabHeight: 30px;
             border-right: 0px solid #eee;
         }
         .tabActive{
-            background: rgb(68,114,196);
+            background-color: #3E4095;
         }
         
     }
     .tabActive:after{
         display: block;
         position: absolute;
-        background: rgb(68,114,196);
+        background-color: #3E4095;
         width: 30px;
         height: 30px;
         top: 0px;

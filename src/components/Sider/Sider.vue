@@ -4,21 +4,21 @@
       <Menu :theme="theme3" :active-name="CurSiderMenu" @on-select="ChangeSiderMenu">
           <MenuGroup title="">
                <MenuItem name="首页" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>首页</p>
+                  <Icon size="22" type="home"></Icon>
+                  <h5>首页</h5>
               </MenuItem>
               <MenuItem name="物联网场景应用" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>物联网场景应用</p>
+                  <Icon size="22" type="earth"></Icon>
+                  <h5>物联网场景应用</h5>
               </MenuItem>
               <MenuItem name="产品与服务" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>产品与服务</p>
+                  <Icon size="22" type="cube"></Icon>
+                  <h5>产品与服务</h5>
                   
               </MenuItem>
               <MenuItem name="公司" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>公司</p>
+                  <i class="F_24 fa fa-building" aria-hidden="true"></i>
+                  <h5>公司</h5>
               </MenuItem>
           </MenuGroup>
       </Menu>
@@ -27,21 +27,21 @@
       <Menu :theme="theme3" :active-name="CurSiderMenu" @on-select="ChangeSiderMenu2">
           <MenuGroup title="">
                <MenuItem name="首页" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>首页</p>
+                  <Icon size="22" type="home"></Icon>
+                  <h5>首页</h5>
               </MenuItem>
               <MenuItem name="物联网场景应用" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>物联网场景应用</p>
+                  <Icon size="22" type="earth"></Icon>
+                  <h5>物联网场景应用</h5>
               </MenuItem>
               <MenuItem name="产品与服务" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>产品与服务</p>
+                  <Icon size="22" type="cube"></Icon>
+                  <h5>产品与服务</h5>
                   
               </MenuItem>
               <MenuItem name="公司" class="marginB_20">
-                  <Icon size="24" type="document-text"></Icon>
-                  <p>公司</p>
+                  <i class="F_24 fa fa-building" aria-hidden="true"></i>
+                  <h5>公司</h5>
               </MenuItem>
           </MenuGroup>
       </Menu>
@@ -73,6 +73,7 @@
   export default{
     data: function () {
       return {
+        theme3: 'light'
       }
     },
     mounted: function () {
@@ -114,6 +115,9 @@
   }
 </script>
 <style lang="scss">
+.F_24{
+  font-size: 22px;
+}
 .desktop{
   display: none;
 }

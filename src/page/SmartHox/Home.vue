@@ -1,54 +1,37 @@
 <template>
     <div class="SmartHox_home">
-    <Carousel/>
-        <!-- <div class="BlockOuter">
-            <h2>全系列物联网接入网关</h2>
-            <p>Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，
-    全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。</p>
-            <Row :gutter="16" class="marginTB_40">
-                <Col span="6">
-                    <div>
-                        <img src="static/img/Icon/SmartHox_home_icon1.png"/>
-                        <h5>统一接口</h5>
-                    </div>
-                </Col>
-                <Col span="6">
-                    <div>
-                        <img src="static/img/Icon/SmartHox_home_icon2.png"/>
-                        <h5>统一接口</h5>
-                    </div>
-                </Col>
-                <Col span="6">
-                    <div>
-                        <img src="static/img/Icon/SmartHox_home_icon3.png"/>
-                        <h5>统一接口</h5>
-                    </div>
-                </Col>
-                <Col span="6">
-                    <div>
-                        <img style="width:100% " src="static/img/Icon/SmartHox_home_icon4.png"/>
-                    </div>
-                </Col>
-            </Row>
-        </div> -->
-        <!-- three block -->
-        <Row style="background-color: rgb(89,89,89);padding-top: 10px;padding-bottom: 10px;color: #fff;">
-            <Col span="8" class="TextCenter">
-              <img class="SmallIcon" src="static/img/Icon/SmartHox_home_icon5.png"/>
-              <span>万物互联一站式解决方案提供商</span>
-            </Col>
-            <Col span="8" class="TextCenter">
-              <img class="SmallIcon" src="static/img/Icon/SmartHox_home_icon5.png"/>
-              <span>IoT 数据云平台服务</span>
-            </Col>
-            <Col span="8" class="TextCenter">
-              <img class="SmallIcon" src="static/img/Icon/SmartHox_home_icon5.png"/>
-              <span>物联网接入网关-Hox One</span>
-            </Col>
-        </Row>
+        <!-- Carousel -->
+        <Carousel/>
         <!--  -->
         <div class="BlockOuter">
-            <h2>物联网一站式纵向服务</h2>
+            <h5>物联网一站式纵向服务</h5>
+            <p>Smart Hox 作为物联网行业极具创新能力的IoT云平台，为企业提供进入物联网必需的设备接入、设备控制、数据分析、供应链资源一站式服务，助力企业智造转型，并为其在物联网时代打造新商业模式。</p>
+            <Row  type="flex"  justify="center"  class="code-row-bg marginTB_40 TextCenter" :gutter="16">
+
+                <Col class="marginB_10" :xs="24" :sm="12" :md="6"  :lg="6" v-for="(Block,Idx) in BlockInfo">
+                  <img class="marginB_20" :src="Block.img"/>
+                  <h5 class="Bold TextLeft marginTB_20">{{Block.title}}</h5>
+                  <p class="TextLeft">{{Block.content}}</p>
+                </Col>
+                <!-- <Col class="marginB_10" :xs="24" :sm="12" :md="6"  :lg="6">
+                  <img class="marginB_10" src="static/img/Icon/SmartHox_home_icon7.png"/>
+                  <h5 class="Bold TextLeft">控制您的设备</h5>
+                  <p class="TextLeft">部署控制、监控和管理您的设备的 IoT 解决方案，从而允许您捕获实时数据。</p>
+                </Col>
+                <Col class="marginB_10" :xs="24" :sm="12" :md="6"  :lg="6">
+                  <img class="marginB_10" src="static/img/Icon/SmartHox_home_icon8.png"/>
+                  <h5  class="Bold TextLeft">分析数据</h5>
+                  <p class="TextLeft">利用您收集的数据并应用高级分析以揭示新业务见解。</p>
+                </Col>
+                <Col class="marginB_10" :xs="24" :sm="12" :md="6"  :lg="6">
+                  <img class="marginB_10" src="static/img/Icon/SmartHox_home_icon9.png"/>
+                  <h5  class="Bold TextLeft">针对见解采取措施</h5>
+                  <p class="TextLeft">通过功能强大的应用程序将见解转变为行动，从而创造新的收入和业务机会。</p>
+                </Col> -->
+            </Row>
+        </div>
+        <!-- <div class="BlockOuter">
+            <h5>物联网一站式纵向服务</h5>
             <p>Smart Hox 作为物联网行业极具创新能力的IoT云平台，为企业提供进入物联网必需的设备接入、设备控制、数据分析、供应链资源一站式服务，助力企业智造转型，并为其在物联网时代打造新商业模式。</p>
             <Row  class="marginTB_40 TextCenter">
                 <Col class="marginB_10" :xs="24" :sm="{ span: 6, offset: 0 }" :md="{ span: 6, offset: 0 }"  :lg="{ span: 5, offset: 1 }">
@@ -72,7 +55,7 @@
                   <p class="TextLeft">通过功能强大的应用程序将见解转变为行动，从而创造新的收入和业务机会。</p>
                 </Col>
             </Row>
-        </div>
+        </div> -->
         <!-- tab1 -->
         <div class="BlockOuter">
           <h2 class="TextCenter">Smart Hox 可以为企业提供智能化服务</h2>
@@ -162,7 +145,7 @@
     </div>
 </template>
 <script>
-import Carousel from '../../components/Carousel/Carousel2'
+import Carousel from '../../components/Carousel/Carousel'
   export default{
     data: function () {
       return {
@@ -170,6 +153,12 @@ import Carousel from '../../components/Carousel/Carousel2'
         Cur_Docking:'需求洽谈',
         TabMenu_Product:[{'name':'智能家电','icon':'ios-monitor'},{'name':'智慧照明','icon':'ios-lightbulb'},{'name':'智慧工控','icon':'ios-game-controller-b'}],
         TabMenu_Docking:[{'name':'需求洽谈','icon':'chatboxes'},{'name':'技术对接','icon':'android-options'},{'name':'产品研发','icon':'cube'},{'name':'联合调试','icon':'ios-cog'},{'name':'生产上线','icon':'ios-world'}],
+        BlockInfo:[
+          {'title':'构建设备','content':'物联网 (IoT)始于“物”（即设备）。构建您的设备（从添加传感器到创建智能设备），才能启动您的 IoT 解决方案。','img':'/static/img/Icon/Home/SmartHox_Home_icon1.png'},
+          {'title':'控制您的设备','content':'部署控制、监控和管理您的设备的 IoT 解决方案，从而允许您捕获实时数据。','img':'/static/img/Icon/Home/SmartHox_Home_icon14.png'},
+          {'title':'分析数据','content':'利用您收集的数据并应用高级分析以揭示新业务见解。','img':'/static/img/Icon/Home/SmartHox_Home_icon2.png'},
+          {'title':'针对见解采取措施','content':'通过功能强大的应用程序将见解转变为行动，从而创造新的收入和业务机会。','img':'/static/img/Icon/Home/SmartHox_Home_icon13.png'},
+        ]
       }
     },
     mounted: function () {
