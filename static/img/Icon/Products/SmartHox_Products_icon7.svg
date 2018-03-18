@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="174px" height="134px" viewBox="0 0 174 134" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group + Oval 38 Copy + Shape Copy 5 Copy Copy Copy Copy Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M42.8547193,96 L131.995636,96 C136.416346,96 140,92.4186157 140,88.0007542 L140,7.9992458 C140,3.5881049 136.416324,0 131.995636,0 L8.00436425,0 C3.58365403,0 0,3.58138434 0,7.9992458 L0,88.0007542 C0,92.4118951 3.58367594,96 8.00436425,96 L15.9810104,96 L23.7610338,103.780023 C26.8877768,106.906766 31.9507594,106.90396 35.0752432,103.779476 L42.8547193,96 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="140" height="109.436854" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <radialGradient cx="15.3125039%" cy="19.9787856%" fx="15.3125039%" fy="19.9787856%" r="148.393781%" id="radialGradient-4">
+            <stop stop-color="#1BE3C2" offset="0%"></stop>
+            <stop stop-color="#2ED0D2" offset="100%"></stop>
+        </radialGradient>
+        <circle id="path-5" cx="36" cy="36" r="36"></circle>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.100000001 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <mask id="mask-7" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="72" height="72" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Copy" transform="translate(-439.000000, -3754.000000)">
+            <g id="Group-+-Oval-38-Copy-+-Shape-Copy-5-Copy-Copy-Copy-Copy-Copy" transform="translate(439.000000, 3754.000000)">
+                <g id="Group">
+                    <g id="Rectangle-576-Copy-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke-opacity="0.5" stroke="#C4C4C4" mask="url(#mask-3)" stroke-width="4" fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <rect id="Rectangle-755-Copy" fill="#DFDFDF" x="20" y="20" width="100" height="6"></rect>
+                    <rect id="Rectangle-755-Copy-2" fill="#DFDFDF" x="20" y="40" width="54" height="6"></rect>
+                    <path d="M16.5094658,77.0950124 C23.1112101,67.7618707 31.23996,66.6526247 42.9285771,68.7410984 C45.4294154,69.1879378 45.7805524,74.0142499 48.3183819,74.1294863 C52.7190323,74.3293087 56.3224401,69.2108567 60.7146494,69.548719 C63.318137,69.7489873 63.2310584,75.2860048 65.8352473,75.4769375 L59.6364051,81.6757797 C77.6072891,82.9933604 95.6298348,79.8791781 113.62655,78.9808773" id="Path-1020" stroke="#989898" stroke-width="2"></path>
+                </g>
+                <g id="Oval-38-Copy-+-Shape-Copy-5-Copy-Copy-Copy-Copy-Copy" transform="translate(98.000000, 56.000000)">
+                    <g id="Oval-38-Copy">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                        <use stroke="#FFFFFF" mask="url(#mask-7)" stroke-width="8" fill="url(#radialGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    </g>
+                    <path d="M20,45.3324073 L20,52 L26.6675927,52 L46.3414363,32.3261564 L39.6738436,25.6585637 L20,45.3324073 L20,45.3324073 Z M51.4799278,27.187665 C52.1733574,26.4942353 52.1733574,25.3651896 51.4799278,24.67176 L47.32824,20.5200722 C46.6348104,19.8266426 45.5057647,19.8266426 44.812335,20.5200722 L41.5585498,23.7738575 L48.2261425,30.4414502 L51.4799278,27.187665 L51.4799278,27.187665 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

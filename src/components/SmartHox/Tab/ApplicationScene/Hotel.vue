@@ -1,15 +1,15 @@
 <template>
     <div class="Hotel">
         <div class="TextCenter">
-            <h1 class="TextLeft">物联网酒店系统构成</h1>
+            <h2 class="TextLeft">物联网酒店系统构成</h2>
             <div class="SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon7.png">
             </div>
-            <h1 class="TextLeft">智慧客房构成</h1>
+            <h2 class="TextLeft">智慧客房构成</h2>
             <div class="SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon8.png">
             </div>
-            <h1 class="TextLeft">物联网酒店系统功能介绍</h1>
+            <h2 class="TextLeft">物联网酒店系统功能介绍</h2>
         </div>
         <Row type="flex" justify="space-between" class="code-row-bg marginTB_40" :gutter="16">
             <Col class="marginB_20" :xs="24" :sm="12" :md="8" :lg="8" v-for="(Introduction,Idx) in IntroductionList">

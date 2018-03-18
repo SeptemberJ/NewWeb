@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="152px" height="132px" viewBox="0 0 152 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Software_Development</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="50.360336 127.237243 60.4700603 114.689786 60.4700603 94 88.6458764 94 88.6458764 114.574434 102 128 50 128"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="52" height="34" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="44" y="122" width="60" height="10" rx="2.35714286"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="60" height="10" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="0" y="0" width="152" height="104" rx="2"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-7" x="8" y="8" width="136" height="88"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="136" height="88" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <radialGradient cx="15.3125039%" cy="19.9787856%" fx="15.3125039%" fy="19.9787856%" r="148.393781%" id="radialGradient-9">
+            <stop stop-color="#FC5E77" offset="0%"></stop>
+            <stop stop-color="#F86C6F" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Copy" transform="translate(-644.000000, -3747.000000)">
+            <g id="Software_Development" transform="translate(644.000000, 3747.000000)">
+                <use id="Path-43" stroke="#DADADA" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#E7E7E7" xlink:href="#path-1"></use>
+                <use id="Rectangle-170" stroke-opacity="0.5" stroke="#C4C4C4" mask="url(#mask-4)" stroke-width="4" fill="#F1F1F1" xlink:href="#path-3"></use>
+                <g id="Rectangle-169">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#737373" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <use id="Rectangle-169" stroke-opacity="0.400000006" stroke="#E1E1E1" mask="url(#mask-8)" stroke-width="4" fill="#FBFBFB" xlink:href="#path-7"></use>
+                <rect id="Rectangle-172" fill="url(#radialGradient-9)" x="40" y="20" width="28" height="8"></rect>
+                <rect id="Rectangle-176" fill="#F0F0F0" x="8" y="8" width="20" height="88"></rect>
+                <rect id="Rectangle-172-Copy-5" fill="url(#radialGradient-9)" x="84" y="76" width="28" height="8"></rect>
+                <rect id="Rectangle-172-Copy" fill="#2CB2EA" x="40" y="34" width="38" height="8"></rect>
+                <rect id="Rectangle-172-Copy-2" fill="#23DBC8" x="40" y="48" width="52" height="8"></rect>
+                <rect id="Rectangle-172-Copy-3" fill="#2CB2EA" x="40" y="62" width="32" height="8"></rect>
+                <rect id="Rectangle-172-Copy-6" fill="#23DBC8" x="76" y="62" width="32" height="8"></rect>
+                <rect id="Rectangle-172-Copy-7" fill="#2CB2EA" x="82" y="34" width="32" height="8"></rect>
+                <rect id="Rectangle-172-Copy-4" fill="#23DBC8" x="40" y="76" width="40" height="8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

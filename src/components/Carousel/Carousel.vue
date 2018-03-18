@@ -79,9 +79,9 @@
       return {
         CurCarousel:0,
         CarouselList:[
-          {'img':'static/img/Banner/banner_home1.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
-          {'img':'http://139.196.232.21/images/management-of-mettings.jpg','tit_b':'无纸化智能会议系统','tit_s':'智能、安全的会议室技术','content':'快速开始会议  更高效地协作'},
-          {'img':'http://139.196.232.21/images/vmw-hp-hero-vSAN6.5.jpg','tit_b':'MES制造执行系统','tit_s':'MANUFACTURING EXECUTION SYSTEM','content':'工业4.0解决方案提供商[构造数字化工厂  实现智能制造]'}
+          {'img':'static/img/Banner/banner_home4.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
+          {'img':'static/img/Banner/banner_home3.png','tit_b':'IoT 数据云平台服务','tit_s':'智能、安全的平台','content':'更高效地协作'},
+          {'img':'static/img/Banner/banner_home2.png','tit_b':'物联网接入网关-Hox One','tit_s':'MANUFACTURING EXECUTION SYSTEM','content':'物联网解决方案提供商[构造数字化工厂  实现智能制造]'}
         ]
       }
     },

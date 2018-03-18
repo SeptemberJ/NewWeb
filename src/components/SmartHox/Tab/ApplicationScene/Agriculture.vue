@@ -1,7 +1,7 @@
 <template>
     <div class="Agriculture">
         <div class="TextCenter">
-            <h1>Hox 智慧农业平台</h1>
+            <h2>Hox 智慧农业平台</h2>
             <p class="TextLeft marginTB_20">智慧农业云平台是Smart Hox将国际领先的物联网、移动互联网、云计算等信息技术与传统农业生产相结合，搭建的农业智能化、标准化生产服务平台，旨在帮助用户构建起一个“从生产到销售，从农田到餐桌”的农业智能化信息服务体系，为用户带来一站式的智慧农业全新体验。Hox智慧农业云平台可广泛应用于国内外大中型农业企业、科研机构、各级现代化农业示范园区与农业科技园区，助力农业生产标准化、规模化、现代化发展进程。</p>
             <div class="SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon9.png">

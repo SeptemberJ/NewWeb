@@ -1,21 +1,21 @@
 <template>
     <div class="Environmental">
         <div class="TextCenter">
-            <h1 class="marginTB_20">环境监测数据中心及决策分析平台</h1>
+            <h2 class="marginTB_20">环境监测数据中心及决策分析平台</h2>
             <p>系统以改善生态环境质量为核心，应用全覆盖、一站式的管理理念，打造集环境监测门户、环境监测实验室管理系统（LIMS）、环境监测数据中心、环境质量数据发布、行政办公等于一体化的综合信息解决方案。利用信息化手段助推环境监测业务处理模式转型，实现实验室管理信息化、监测数据分析智能化、日常办公自动化，提升全站监测管理水平及科学研究数据。</p>
             <div class="TextCenter SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon16.png">
             </div>
         </div>
         <div class="marginTB_40">
-            <h1>系统特点</h1>
+            <h2>系统特点</h2>
             <div class="marginTB_20" v-for="(Characteristic,Idx) in CharacteristicInfo">
                 <h3 class="marginTB_10">{{Characteristic.title}}</h3>
                 <p>{{Characteristic.content}}</p>
             </div>
         </div>
         <div class="marginTB_40">
-            <h1>系统功能</h1>
+            <h2>系统功能</h2>
             <div class="TextCenter SingleImg marginTB_40">
                 <img src="static/img/Icon/SmartHox_ApplicationScene_icon17.png">
             </div>
