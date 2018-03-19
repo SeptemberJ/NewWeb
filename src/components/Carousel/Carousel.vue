@@ -39,13 +39,13 @@
                     <div class="owl-controls clickable" style="bottom: 58px;">
                       <div class="owl-pagination">
                         <div :class="{ 'active': CurCarousel == 0,'owl-page downpage CursorPointer':true}"  @click="ChangeCurCarousel(0)">
-                          <span class=""><i class="fa fa-truck"></i><p style="height: 40px;">万物互联一站式解决方案提供商</p></span>
+                          <span class=""><i class="fa fa-cubes"></i><p style="height: 40px;">万物互联一站式解决方案提供商</p></span>
                         </div>
                         <div :class="{ 'active': CurCarousel == 1,'owl-page downpage CursorPointer':true}" @click="ChangeCurCarousel(1)">
-                          <span class=""><i class="fa fa-group"></i><p style="height: 40px;">IoT 数据云平台服务</p></span>
+                          <span class=""><i class="fa fa-send-o"></i><p style="height: 40px;">IoT 数据云平台服务</p></span>
                         </div>
                         <div :class="{ 'active': CurCarousel == 2,'owl-page downpage CursorPointer':true}"  @click="ChangeCurCarousel(2)">
-                          <span class=""><i class="fa fa-inbox"></i><p style="height: 40px;">物联网接入网关-Hox One</p></span>
+                          <span class=""><i class="fa fa-sitemap"></i><p style="height: 40px;">物联网接入网关-Hox One</p></span>
                         </div>
                       </div>
                       <div class="owl-buttons">
@@ -79,7 +79,7 @@
       return {
         CurCarousel:0,
         CarouselList:[
-          {'img':'static/img/Banner/banner_home4.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
+          {'img':'static/img/Banner/banner_home5.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
           {'img':'static/img/Banner/banner_home3.png','tit_b':'IoT 数据云平台服务','tit_s':'智能、安全的平台','content':'更高效地协作'},
           {'img':'static/img/Banner/banner_home2.png','tit_b':'物联网接入网关-Hox One','tit_s':'MANUFACTURING EXECUTION SYSTEM','content':'物联网解决方案提供商[构造数字化工厂  实现智能制造]'}
         ]

@@ -1,15 +1,18 @@
 <template>
     <div class="Community">
-        <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
-            <Col class="marginB_20" :xs="24" :sm="12" :md="6" :lg="6" v-for="(Block,Idx) in BlockInfo">
-                <div style="height: 100%;" class="Bg_blue Padding_10 colorWhite TextCenter">
-                    <h3>{{Block.title}}</h3>
-                    <p class="marginTB_20">{{Block.content}}</p>
-                    <img :src="Block.img">
-                </div>
-            </Col>
-            <div style="clear: both;"></div>
-        </Row>
+        <div class="TextCenter OneBlock">
+            <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
+                <Col class="marginB_20" :xs="24" :sm="12" :md="6" :lg="6" v-for="(Block,Idx) in BlockInfo">
+                    <!-- <div style="height: 100%;" class=" Padding_10 Bg_blue colorWhite TextCenter"> -->
+                    <div style="height: 100%;" class=" Padding_10 PaddingTB_40 TextCenter">
+                        <h3>{{Block.title}}</h3>
+                        <p class="marginTB_20">{{Block.content}}</p>
+                        <img :src="Block.img">
+                    </div>
+                </Col>
+                <div style="clear: both;"></div>
+            </Row>
+        </div>
 
         <div class="TextCenter">
             <h2>软硬件整体解决方案，多维度保障社区安全</h2>

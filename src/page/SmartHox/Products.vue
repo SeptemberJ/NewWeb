@@ -8,7 +8,7 @@
                 </div>
             </CarouselItem>
         </Carousel> -->
-        <img style="width: 100%;"  src="static/img/Banner/SmartHox_banner1.png">
+        <img style="width: 100%;"  src="static/img/Banner/SmartHox_banner3.png">
         <!-- tab -->
         <div class="TabHead">
             <span v-for="(Tab,Idx) in TabHeadList" :class="{'CursorPointer':true,'tabActive':CurTab == Tab}" @click="ChangeTab(Tab)">{{Tab}}</span>

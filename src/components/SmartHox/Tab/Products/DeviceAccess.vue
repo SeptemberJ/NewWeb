@@ -7,11 +7,12 @@
 
         <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
             <Col class="marginB_20" :xs="24" :sm="24" :md="8" :lg="8" v-for="(Block,Idx) in BlockInfo">
-                <div style="height: 100%;" :class="{'Padding_20':true, 'colorWhite':true, 'TextCenter':true,'Bg_blue':Idx == 0,'Bg_gray':Idx == 1,'Bg_orange':Idx == 2}">
-                    <img class="marginB_20" style="width: 100px;" :src="Block.img">
-                    <h3 class="marginB_20">{{Block.title}}</h3>
+                <!-- <div style="height: 100%;" :class="{'Padding_20':true, 'colorWhite':true, 'TextCenter':true,'Bg_blue':Idx == 0,'Bg_gray':Idx == 1,'Bg_orange':Idx == 2}"> -->
+                <div style="height: 100%;" :class="{'Padding_20':true,'TextCenter':true}">
+                    <img class="marginB_10" style="width: 100px;" :src="Block.img">
+                    <h3 class="">{{Block.title}}</h3>
                     <h5>{{Block.slogan}}</h5>
-                    <p class="marginTB_40 TextLeft">{{Block.content}}</p>
+                    <p class="marginT_20 TextLeft">{{Block.content}}</p>
                 </div>
             </Col>
             <div style="clear: both;"></div>
@@ -22,11 +23,14 @@
             <p>在线自定义完成产品面板及功能配置, 新功能随时在线升级</p>
             <p>第三方智能终端（Amazon Echo, Google Home、天猫机灵等）, 在线轻松点选即可完成。
 新增产品设备、产品系统升级、新增功能控制面板等, 在线选择所需软件服务即可完成。用户无需升级 App就可以体验到最新功</p>
+            <div class="SingleImg">
+                <img src="static/img/Icon/Products/SmartHox_Products_icon29.png">
+            </div>
         </div>
 
         <div class="OneBlock TextCenter">
             <h2 class="marginTB_20">电工类、照明类产品全标准化开发，投入成本低</h2>
-            <p>ox智能在电工与照明领域已积累了上千款产品的智能化解决经验，如果您有电工类、照明类产品的智能化需求，可选择SOC免开发完整方案，成本直降至少70%</p>
+            <p>Hox智能在电工与照明领域已积累了上千款产品的智能化解决经验，如果您有电工类、照明类产品的智能化需求，可选择SOC免开发完整方案，成本直降至少70%</p>
         </div>
 
         <div class="OneBlock TextCenter colorWhite Gradient">

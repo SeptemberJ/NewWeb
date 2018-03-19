@@ -4,9 +4,13 @@
             <Col span="4">
                 <span class="CursorPointer" @click="ToggleSider()"><Icon  style="margin-top: 10px;margin-left: 10px;" size="36" color="#fff" type="navicon"></Icon></span>
             </Col>
-            <Col class="desktop  TextRight  LineHeight" span="10" offset="10">
-                <Button type="text">Hox云平台登入</Button>
-                <Button type="text">热线电话:  400 880 2248</Button>
+            <Col v-if='open' class="desktop TextRight  LineHeight" span="20">
+                <Button type="text" style="color: #fff;">Hox云平台登入</Button>
+                <Button type="text" style="color: #fff;margin-right: 150px;">400 880 2248</Button>
+            </Col>
+            <Col v-if="!open" class="desktop  TextRight  LineHeight" span="20">
+                <Button type="text" style="color: #fff;">Hox云平台登入</Button>
+                <Button type="text" style="color: #fff;">400 880 2248</Button>
             </Col>
             <Col class="tablet TextRight" span="4" offset="16">
                 <Dropdown trigger="click" style="margin-left: 20px;text-align: left;" placement="bottom-end">

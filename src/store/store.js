@@ -20,6 +20,7 @@ const store = new Vuex.Store({
   mutations:{
     [types.ROUTE_CHANGE](state,data){
       state.activeRoute = data.activeRoute
+      state.CurSiderMenu = data.activeRoute
     },
     
   },

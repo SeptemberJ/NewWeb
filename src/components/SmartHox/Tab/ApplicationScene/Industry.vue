@@ -4,10 +4,9 @@
             <Row type="flex"  justify="center"  class="code-row-bg":gutter="16">
                 <Col class="marginB_20" :xs="24" :sm="12" :md="6" :lg="6" v-for="(Block,Idx) in BlockInfo">
                     <div style="height: 100%;" class="PaddingLR_20 PaddingTB_40 TextCenter">
-                        <img class="marginB_20" :src="Block.img">
                         <h3 class="">{{Block.title}}</h3>
                         <p class="marginTB_20 ">{{Block.content}}</p>
-                        
+                        <img class="marginB_20" :src="Block.img">
                     </div>
                 </Col>
                 <div style="clear: both;"></div>
@@ -15,7 +14,8 @@
         </div>
         
         <div class="OneBlock">
-            <Row style="background-color: #000;color: #fff;">
+            <!-- <Row style="background-color: #000;color: #fff;"> -->
+            <Row>
                 <Col span="24" class="marginTB_20 PaddingLR_20">
                     <h2 class="HavBefore marginTB_10">物联分析助力企业高效运转及数字化改造</h2>
                     <p class="HaveAfter">软硬件智能联动，打通设备与企业管理者之间的通讯壁垒，构建物联分析基础，用数据驱动企业高效运转</p>
@@ -32,10 +32,10 @@
                     <h2 class="marginTB_10">数据共享<span class="HavMiddle3"></span>协同管理，提升企业运行<span class="HavMiddle4"></span></h2>
                     <p>物联数据透视生产、采购、销售、管理等多部门运转规律，智能优化管理协同流程，实现企业各部门间的高效合</p>
                 </Col>
-                <div class="TextCenter SingleImg marginTB_40">
-                    <img src="static/img/Icon/ApplicationScene/ApplicationScene_Img1.png">
-                </div>
             </Row>
+            <div class="TextCenter SingleImg marginTB_40">
+                <img src="static/img/Icon/ApplicationScene/ApplicationScene_Img1.png">
+            </div>
         </div>
         <div class="TextCenter SingleImg OneBlock">
             <img class="marginTB_40" src="static/img/Icon/SmartHox_ApplicationScene_icon15.png">
@@ -81,9 +81,9 @@
 $Color: #F58733;
 $Color2: #fff200;
 .Industry{
-    margin: 80px 20px;
+    margin: 40px 20px;
     .SingleImg img{
-        max-width: 95%;
+        max-width: 85%;
     }
     .HavBefore:before{
         content:'网关+云+APP，';
