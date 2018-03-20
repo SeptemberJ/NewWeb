@@ -14,7 +14,6 @@
               <MenuItem name="产品与服务" class="marginB_20">
                   <Icon size="22" type="cube"></Icon>
                   <h5>产品与服务</h5>
-                  
               </MenuItem>
               <MenuItem name="公司" class="marginB_20">
                   <i class="F_24 fa fa-building" aria-hidden="true"></i>
@@ -37,11 +36,13 @@
               <MenuItem name="产品与服务" class="marginB_20">
                   <Icon size="22" type="cube"></Icon>
                   <h5>产品与服务</h5>
-                  
               </MenuItem>
               <MenuItem name="公司" class="marginB_20">
                   <i class="F_24 fa fa-building" aria-hidden="true"></i>
                   <h5>公司</h5>
+              </MenuItem>
+              <MenuItem name="Close" class="marginB_20">
+                  <Icon size="22" type="chevron-left"></Icon>
               </MenuItem>
           </MenuGroup>
       </Menu>
@@ -102,8 +103,10 @@
         //this.ToggleSider()
       },
       ChangeSiderMenu2(Menu){
-        this.$store.state.CurSiderMenu = Menu
-        this.$router.push({name:Menu})
+        if(Menu != 'Close'){
+          this.$store.state.CurSiderMenu = Menu
+          this.$router.push({name:Menu})
+        }
         this.ToggleSider()
       },
       ToggleSider (flag) {
@@ -136,7 +139,7 @@
 .ivu-menu-item-group-title{
   background-repeat: no-repeat;
   background-position-x: center;
-  background-image: url('http://139.196.232.21/images/logo.png')
+  background-image: url('http://www.btzoon.com/SmartHox/static/img/logo.png')
 }
 .ivu-menu-light{
   width: 150px !important;

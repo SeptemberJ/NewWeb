@@ -5,20 +5,20 @@
                 <span class="CursorPointer" @click="ToggleSider()"><Icon  style="margin-top: 10px;margin-left: 10px;" size="36" color="#fff" type="navicon"></Icon></span>
             </Col>
             <Col v-if='open' class="desktop TextRight  LineHeight" span="20">
-                <Button type="text" style="color: #fff;">Hox云平台登入</Button>
+                <Button type="text" style="color: #fff;" @click="ToSmartHox">Hox云平台登入</Button>
                 <Button type="text" style="color: #fff;margin-right: 150px;">400 880 2248</Button>
             </Col>
             <Col v-if="!open" class="desktop  TextRight  LineHeight" span="20">
-                <Button type="text" style="color: #fff;">Hox云平台登入</Button>
+                <Button type="text" style="color: #fff;" @click="ToSmartHox">Hox云平台登入</Button>
                 <Button type="text" style="color: #fff;">400 880 2248</Button>
             </Col>
             <Col class="tablet TextRight" span="4" offset="16">
-                <Dropdown trigger="click" style="margin-left: 20px;text-align: left;" placement="bottom-end">
+                <Dropdown trigger="click" style="margin-top:10px;margin-left: 20px;text-align: left;" placement="bottom-end" @on-click="ClickMenu">
                     <a href="javascript:void(0)">
                         <Icon class="Transform_R_90" size="30" color="#fff" type="more"></Icon>
                     </a>
                     <DropdownMenu slot="list">
-                        <DropdownItem>Hox云平台登入</DropdownItem>
+                        <DropdownItem name="0">Hox云平台登入</DropdownItem>
                         <DropdownItem>热线电话:400 880 2248</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
@@ -67,6 +67,14 @@
         },
         ShowMenu(){
 
+        },
+        ToSmartHox(){
+            window.open('http://220.248.107.62:8089/dist/')
+        },
+        ClickMenu(name){
+            if(name == 0){
+                this.ToSmartHox()
+            }
         }
      
 
