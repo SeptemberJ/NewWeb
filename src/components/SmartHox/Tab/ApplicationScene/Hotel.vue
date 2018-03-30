@@ -1,25 +1,51 @@
 <template>
     <div class="Hotel">
-        <div class="TextCenter">
-            <h2 class="TextLeft">物联网酒店系统构成</h2>
-            <div class="SingleImg marginTB_40">
-                <img src="static/img/Icon/SmartHox_ApplicationScene_icon7.png">
-            </div>
-            <h2 class="TextLeft">智慧客房构成</h2>
-            <div class="SingleImg marginTB_40">
-                <img src="static/img/Icon/SmartHox_ApplicationScene_icon8.png">
-            </div>
-            <h2 class="TextLeft">物联网酒店系统功能介绍</h2>
+        <div class="TelescopicBlock SectionBlock">
+            <h1 class="marginTB_40 colorBlack">物联网酒店系统</h1>
+            <Row type="flex" justify="space-between" class="code-row-bg" :gutter="16">
+                <Col :xs="24" :sm="24" :md="12" :lg="12" v-for="(Block,Idx) in BlockInfo" class="marginB_10">
+                    <div class="thumb-container  singleLineEllipse">
+                        <div class="thumb-img"  :style="{'background-image':'url(' + Block.img +')'}">
+                        </div>
+                        <div class="thumb-details showHam" >
+                            <div class="col-xs-1 col-md-1 col-sm-1" style="height: 86px;">
+                              <i :class="[Block.icon]"></i>
+                            </div>
+                            <div class="col-xs-10 col-md-10 col-sm-10" style="height: 86px;">
+                                <div class="detail-content clamp">
+                                    <h3 class="clampingDetail" data-id="randomId7643" style="">
+                                        <span class="asianLang" style="width: 100%">{{Block.title}}</span>
+                                    </h3>
+                                    <p class="clampingDetail" data-id="randomId9455" style="">
+                                        <span class="asianLang" style="width: 200px">{{Block.content}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1 col-md-1 col-sm-1 cntClk" style="height: 86px;">
+                                <i class="fa fa-bars detail-toggle"></i>
+                            </div>
+                            <div class="social-block">
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
         </div>
-        <Row type="flex" justify="space-between" class="code-row-bg marginTB_40" :gutter="16">
-            <Col class="marginB_20" :xs="24" :sm="12" :md="8" :lg="8" v-for="(Introduction,Idx) in IntroductionList">
-                <div style="min-height: 200px;" class="Padding_10">
-                    <h3>{{Introduction.title}}</h3>
-                    <p class="marginTB_20">{{Introduction.content}}</p>
-                </div>
-            </Col>
-            <div style="clear: both;"></div>
-        </Row>
+
+        <div class="LineBlock"></div>
+
+        <div class="TelescopicBlock SectionBlock">
+            <h2 class="marginTB_40 colorBlack">物联网酒店系统功能介绍</h2>
+            <Row type="flex" justify="space-between" class="code-row-bg marginTB_40" :gutter="16">
+                <Col class="marginB_20" :xs="24" :sm="12" :md="12" :lg="12" v-for="(Introduction,Idx) in IntroductionList">
+                    <div style="min-height: 200px;" class="Padding_10">
+                        <h3><i class="fa fa-tag marginR_10"></i>{{Introduction.title}}</h3>
+                        <p class="marginTB_20">{{Introduction.content}}</p>
+                    </div>
+                </Col>
+                <div style="clear: both;"></div>
+            </Row>
+        </div>
     </div>
 </template>
 <script>
@@ -27,6 +53,10 @@
   export default{
     data: function () {
       return {
+        BlockInfo:[
+          {'title':'物联网酒店系统构成','content':'','img':'static/img/SmartHox/picture/134205298217.jpg','icon':'fa fa-thumbs-o-up'},
+          {'title':'智慧客房构成','content':'','img':'static/img/SmartHox/picture/133203621067.jpg','icon':'fa fa-tags'}
+        ],
         IntroductionList:[
             {'title':'手机自助订房','content':'简化入住流程，手机直接订房并支付；无需人工参与，系统自动分配房间；免去OTA平台佣金（20%）；节约前台人工成本（2-4人）。'},
             {'title':'未到酒店前远程查看并控制客房的温度、湿度','content':'进入客房即可享受符合自己个性需求的温度；打造可以控制客房湿度的酒店；钟点房客人体验感更好，进入房间即可享受舒适的温湿度。让本酒店在区域内具有无与伦比的竞争优势！系统具有记忆功能，第一次选择以后，下次入住时系统自动推荐！'},
@@ -64,9 +94,10 @@
 </script>
 <style lang="scss" scoped>
 .Hotel{
-    margin: 40px 20px;
+    margin: 40px 0px;
     .SingleImg img{
         max-width: 80%;
     }
+    
 }
 </style>

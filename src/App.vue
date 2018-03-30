@@ -2,12 +2,14 @@
   <div class="com-app">
      <div class="layout">
         <div class="content">
-          <div v-bind:class="{ 'content_left': open}">
-          <h2 v-if="open">
+          <div class="content_left">
+          <!-- <div v-bind:class="{ 'content_left': open}"> -->
+          <!-- <h2 v-if="open"> -->
             <Sider/>
-          </h2>
+          <!-- </h2> -->
           </div>
-          <div :class="{'content_right':open}">
+          <div class="content_right">
+          <!-- <div :class="{'content_right':open}"> -->
           <div class="header" style="width: 100%">
             <!-- <div class="header" :style="{width: open?'calc(100% - 150px)':'100%'}"> -->
               <Header/>
@@ -72,7 +74,7 @@ import Footer from 'components/Footer/Footer'
   }
 </script>
 <style lang="scss">
-$width: 150px;
+$width: 95px;
 
 
 .layout{
@@ -97,12 +99,10 @@ $width: 150px;
 
 .content_left{
   position: fixed;
-  width: $width;
   height: 100%;
-  background-color: #fff;
-  /*
-  position: absolute;
-  */
+  border-left: 1px solid #464547;
+  background-color: #464547;
+  border:0px solid blue;
   top: 0px;
   left: 0px;
   z-index: 999999;
@@ -119,7 +119,7 @@ $width: 150px;
   .content_left{
     position: fixed;
     top: 0;
-    background-color: #fff;
+    border:0px solid red;
     width: $width;
     float: left;
   }
@@ -136,18 +136,19 @@ $width: 150px;
 .header{
   position: fixed;
   top: 0;
-  background-color: white;
+  background-color: #000;
   height: 40px;
   z-index: 999;
 }
 
 .body{
   background-color: white;
-  margin: 60px 10px 20px 10px;
+  margin: 52px 0px 0px 0px;
   box-shadow: 0 1px 1px rgba(0,0,0,.2);
 }
 
 .footer{
+  margin: 0px;
   padding: 0;
   text-align: center;
 }

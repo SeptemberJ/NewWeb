@@ -1,42 +1,53 @@
 <template>
     <div class="Industry">
-        <div class="TextCenter OneBlock">
-            <Row type="flex"  justify="center"  class="code-row-bg":gutter="16">
-                <Col class="marginB_20" :xs="24" :sm="12" :md="6" :lg="6" v-for="(Block,Idx) in BlockInfo">
-                    <div style="height: 100%;" class="PaddingLR_20 PaddingTB_40 TextCenter">
-                        <h3 class="">{{Block.title}}</h3>
-                        <p class="marginTB_20 ">{{Block.content}}</p>
-                        <img class="marginB_20" :src="Block.img">
+        <div class="TelescopicBlock">
+            <Row type="flex" justify="space-between" class="code-row-bg" :gutter="16">
+                <Col :xs="24" :sm="24" :md="12" :lg="12" v-for="(Block,Idx) in BlockInfo" class="marginB_10">
+                    <div class="thumb-container  singleLineEllipse">
+                        <div class="thumb-img"  :style="{'background-image':'url(' + Block.img +')'}">
+                        </div>
+                        <div class="thumb-details showHam" >
+                            <div class="col-xs-1 col-md-1 col-sm-1" style="height: 86px;">
+                              <i :class="[Block.icon]"></i>
+                            </div>
+                            <div class="col-xs-10 col-md-10 col-sm-10" style="height: 86px;">
+                                <div class="detail-content clamp">
+                                    <h3 class="clampingDetail" data-id="randomId7643" style="">
+                                        <span class="asianLang" style="width: 100%">{{Block.title}}</span>
+                                    </h3>
+                                    <p class="clampingDetail" data-id="randomId9455" style="">
+                                        <span class="asianLang" style="width: 200px">{{Block.content}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1 col-md-1 col-sm-1 cntClk" style="height: 86px;">
+                                <i class="fa fa-bars detail-toggle"></i>
+                            </div>
+                            <div class="social-block">
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+        </div>
+        
+        <div class="LineBlock"></div>
+
+        <div class="TelescopicBlock SectionBlock">
+            <h2 class="marginTB_40 colorBlack">物联网酒店系统功能介绍</h2>
+            <Row type="flex" justify="space-between" class="code-row-bg marginTB_40" :gutter="16">
+                <Col class="marginB_20" :xs="24" :sm="12" :md="12" :lg="12" v-for="(Introduction,Idx) in IntroductionList">
+                    <div style="min-height: 200px;" class="Padding_10">
+                        <h3><i class="fa fa-tag marginR_10"></i>{{Introduction.title}}</h3>
+                        <p class="marginTB_20">{{Introduction.content}}</p>
                     </div>
                 </Col>
                 <div style="clear: both;"></div>
             </Row>
         </div>
-        
-        <div class="OneBlock">
-            <!-- <Row style="background-color: #000;color: #fff;"> -->
-            <Row>
-                <Col span="24" class="marginTB_20 PaddingLR_20">
-                    <h2 class="HavBefore marginTB_10">物联分析助力企业高效运转及数字化改造</h2>
-                    <p class="HaveAfter">软硬件智能联动，打通设备与企业管理者之间的通讯壁垒，构建物联分析基础，用数据驱动企业高效运转</p>
-                </Col>
-                <Col span="20" offset="4" class="marginTB_20 PaddingLR_20">
-                    <h2 class="marginTB_10">故障预警联动机制，<span class="HavMiddle"></span>工业安全</h2>
-                    <p>严苛的工业安全智能系统，全方位监测工厂设备、电源、环境等安全情况</p>
-                </Col>
-                <Col span="16"  offset="8" class="marginTB_20 PaddingLR_20">
-                    <h2 class="marginTB_10">设备全程定位追踪，<span class="HavMiddle2"></span>响应市场需求</h2>
-                    <p>从出厂到售后全程定位追踪，针对设备使用年限、使用情况等及时进行服务、售后及二次销售跟进，提升工厂市场反应速度</p>
-                </Col>
-                <Col span="12"  offset="12" class="marginTB_20 PaddingLR_20">
-                    <h2 class="marginTB_10">数据共享<span class="HavMiddle3"></span>协同管理，提升企业运行<span class="HavMiddle4"></span></h2>
-                    <p>物联数据透视生产、采购、销售、管理等多部门运转规律，智能优化管理协同流程，实现企业各部门间的高效合</p>
-                </Col>
-            </Row>
-            <div class="TextCenter SingleImg marginTB_40">
-                <img src="static/img/Icon/ApplicationScene/ApplicationScene_Img1.png">
-            </div>
-        </div>
+
+        <div class="LineBlock"></div>
+
         <div class="TextCenter SingleImg OneBlock">
             <img class="marginTB_40" src="static/img/Icon/SmartHox_ApplicationScene_icon15.png">
         </div>
@@ -48,10 +59,22 @@
     data: function () {
       return {
         BlockInfo:[
-            {'title':'物联分析系统','content':'工业物联，使设备主动开口说话，物联数据监测分析','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_wlfx.png'},
-            {'title':'工业安全系统','content':'设备故障预警、消息推送事后维修变事前处理','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_gyaq.png'},
-            {'title':'销售拓展系统','content':'设备定位、地图分布，基于设备生命周期服务客户，对下游客户二次销售','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_xstz.png'},
-            {'title':'协同管理系统','content':'生成设备销售采购协同管理，优化流程，数据透视','img':'static/img/Icon/SmartHox_home_icon8.png',}
+          {'title':'物联分析系统','content':'工业物联，使设备主动开口说话，物联数据监测分析','img':'static/img/SmartHox/picture/vmw-vrealize-ops66-upgrade.jpg','icon':'fa fa-area-chart'},
+          {'title':'工业安全系统','content':'设备故障预警、消息推送事后维修变事前处理','img':'static/img/SmartHox/picture/vmw-nfv-telco.jpg','icon':'fa fa-bomb'},
+          {'title':'销售拓展系统','content':'设备定位、地图分布，基于设备生命周期服务客户，对下游客户二次销售','img':'static/img/SmartHox/picture/vmware-vsphere-6-5-spotlight.jpg','icon':'fa fa-gift'},
+          {'title':'协同管理系统','content':'生成设备销售采购协同管理，优化流程，数据透视','img':'static/img/SmartHox/picture/vmw-latam-dummies.jpg','icon':'fa fa-puzzle-piece'},
+        ],
+        IntroductionList:[
+            {'title':'网管+云+APP,物联分析助力企业高效运转及数字化改造','content':'软硬件智能联动，打通设备与企业管理者之间的通讯壁垒，构建物联分析基础，用数据驱动企业高效运转'},
+            {'title':'故障预警联动机制,全方位保障工业安全','content':'严苛的工业安全智能系统，全方位监测工厂设备、电源、环境等安全情况'},
+            {'title':'设备全程定位追踪，准确快速响应市场需求','content':'从出厂到售后全程定位追踪，针对设备使用年限、使用情况等及时进行服务、售后及二次销售跟进，提升工厂市场反应速度'},
+            {'title':'数据共享优化同管理，提升企业运行效率','content':'物联数据透视生产、采购、销售、管理等多部门运转规律，智能优化管理协同流程，实现企业各部门间的高效合'},
+        ],
+        BlockInfo2:[
+            {'title':'网管+云+APP,物联分析助力企业高效运转及数字化改造','content':'软硬件智能联动，打通设备与企业管理者之间的通讯壁垒，构建物联分析基础，用数据驱动企业高效运转','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_wlfx.png'},
+            {'title':'','content':'','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_gyaq.png'},
+            {'title':'','content':'','img':'static/img/Icon/ApplicationScene/ApplicationScene_Icon_xstz.png'},
+            {'title':'','content':'','img':'static/img/Icon/SmartHox_home_icon8.png',}
         ]
       }
     },
@@ -81,7 +104,7 @@
 $Color: #F58733;
 $Color2: #fff200;
 .Industry{
-    margin: 40px 20px;
+    margin: 40px 0px;
     .SingleImg img{
         max-width: 85%;
     }

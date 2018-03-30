@@ -1,0 +1,185 @@
+/*@import '//fonts.useso.com/css?family=Roboto:300,400,500,700,400italic';
+@import 'http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css';*/
+html,body{  
+	height: 100% !important;  
+}
+img{
+	display: inline-block !important;  
+}
+.mu-drawer{
+	width: 150px !important;  
+}
+#app,.com-app{
+	height: 100% !important;  
+	margin: 0 auto;
+}
+.selfAdaptionWrap{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+.fontSizeSmall{
+	font-size: 14px;
+}
+
+
+/*color*/
+.colorRed{
+	color: #ff150e;
+}
+.colorWhite{
+	color: #fff;
+}
+.colorOrange{
+	color: #FF7800;
+}
+.colorLightBlack{
+	color: #6d7380;
+}
+.colorGray{
+	color: #989898;
+}
+
+
+/*background*/
+.lightBlue{
+	background-color: #F3F8FE;
+}
+.Bg_blue{
+	background-color: #3E4095;
+    /*background-color: rgb(68,114,196) !important;*/
+}
+.Bg_gray{
+    background-color: rgb(124,124,124) !important;
+}
+.Bg_orange{
+	background-color: #F58733;
+    /*background-color: rgb(237,125,49);*/
+}
+
+
+
+
+
+/*textalign*/
+.TextCenter{
+	text-align: center;
+}
+.TextLeft{
+	text-align: left;
+}
+.TextRight{
+	text-align: right;
+}
+.textIndent{
+	text-indent:20px;
+}
+
+
+/*margin*/
+.marginT_10{
+	margin-top: 10px;
+}
+.marginT_20{
+	margin-top: 20px;
+}
+.marginTB_10{
+	margin: 10px auto;
+}
+.marginTB_20{
+	margin: 20px auto;
+}
+.marginB_20{
+	margin-bottom: 20px;
+}
+.marginB_10{
+	margin-bottom: 10px;
+}
+.marginT_20{
+	margin-top: 20px;
+}
+.marginTB_40{
+	margin: 40px auto;
+}
+.marginT_40{
+	margin-top: 40px;
+}
+.marginB_40{
+	margin-bottom: 40px;
+}
+.marginL_20{
+	margin-left: 20px;
+}
+.marginL_10{
+	margin-left: 10px;
+}
+.marginR_10{
+	margin-right: 10px;
+}
+.margin_auto{
+	margin: 0 auto;
+}
+
+
+/*padding*/
+.Padding_10{
+	padding: 10px;
+}
+.Padding_20{
+	padding: 20px;
+}
+.PaddingLR_20{
+	padding: 0 20px;
+}
+.PaddingTB_40{
+	padding: 40px 0;
+}
+
+
+.LineHeight{
+	line-height: 52px;
+}
+
+.ClearBoth{
+	clear: both;
+}
+
+.DisplayBlock{
+display: block;
+}
+.InlineBlock{
+	display: inline-block;
+}
+.FloatLeft{
+	clear: both;
+	float: left;
+}
+.WidthFull{
+	width: 100% !important;
+}
+.Bold{
+	font-weight: bold;
+}
+
+.CursorPointer{
+	cursor: pointer;
+}
+
+
+/*iview重定义*/
+.ivu-menu-horizontal.ivu-menu-light:after{
+height: 0px !important;
+}
+.ivu-menu-vertical .ivu-menu-item, .ivu-menu-vertical .ivu-menu-submenu-title{
+padding: 10px 4px !important;
+text-align: center;
+}
+.ivu-card-body{
+margin-top: 20px;
+/*padding: 0px !important;*/
+}
+.OneBlock{
+	margin: 40px auto;
+}

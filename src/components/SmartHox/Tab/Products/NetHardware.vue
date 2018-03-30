@@ -1,16 +1,43 @@
 <template>
     <div class="NetHardware">
-        <div class="TextCenter">
-            <h2 class="marginTB_20">物联网硬件产品</h2>
-            <p class="marginTB_20">多协议支持，快速打通物联网接入。 全品类开发经验，灵活的产品模式</p>
+        <div class="TelescopicBlock">
+            <h1 class="marginTB_40 colorBlack">物联网硬件产品</h1>
+            <p class="marginB_40">多协议支持，快速打通物联网接入。 全品类开发经验，灵活的产品模式</p>
+            <Row type="flex" justify="space-between" class="code-row-bg" :gutter="16">
+                <Col :xs="24" :sm="24" :md="12" :lg="12" v-for="(Block,Idx) in BlockInfo" class="marginB_10">
+                    <div class="thumb-container  singleLineEllipse">
+                        <div class="thumb-img"  :style="{'background-image':'url(' + Block.img +')'}">
+                        </div>
+                        <div class="thumb-details showHam" >
+                            <div class="col-xs-1 col-md-1 col-sm-1" style="height: 86px;">
+                              <i :class="[Block.icon]"></i>
+                            </div>
+                            <div class="col-xs-10 col-md-10 col-sm-10" style="height: 86px;">
+                                <div class="detail-content clamp">
+                                    <h3 class="clampingDetail" data-id="randomId7643" style="">
+                                        <span class="asianLang" style="width: 100%">{{Block.title}}</span>
+                                    </h3>
+                                    <p class="clampingDetail" data-id="randomId9455" style="">
+                                        <span class="asianLang" style="width: 200px">{{Block.content}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1 col-md-1 col-sm-1 cntClk" style="height: 86px;">
+                                <i class="fa fa-bars detail-toggle"></i>
+                            </div>
+                            <div class="social-block">
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
         </div>
 
-        <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
+        <!-- <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
             <Col class="marginB_20" :xs="24" :sm="24" :md="8" :lg="8" v-for="(Block,Idx) in BlockInfo">
-                <!-- <div style="height: 100%;" :class="{'Padding_20':true, 'colorWhite':true, 'TextCenter':true,'Bg_blue':Idx == 0,'Bg_gray':Idx == 1,'Bg_orange':Idx == 2}"> -->
                 <div style="height: 100%;" :class="{'Padding_20':true,'TextCenter':true,}">
                     <h3 class="HasCircleBorder">{{Block.title}}</h3>
-                    <!-- <h3>{{Block.slogan}}</h3> -->
+                    <h3>{{Block.slogan}}</h3>
                     <p class="marginTB_40 TextLeft">{{Block.content}}</p>
                     <div class="SingleImg marginTB_40">
                         <img  style="width: 30%;height: 30%" :src="Block.img">
@@ -18,11 +45,13 @@
                 </div>
             </Col>
             <div style="clear: both;"></div>
-        </Row>
+        </Row> -->
 
-        <div class="TextCenter OneBlock">
-            <h2 class="marginTB_20">智能硬件产品</h2>
-            <p class="marginTB_20">物联网 (IoT)始于“物”（即设备）。构建您的设备（从添加传感器到创建智能设备），才能启动您的 IoT 解决方案。我们提供如下产品</p>
+        <div class="LineBlock"></div>
+
+        <div class="TelescopicBlock">
+            <h1 class="marginTB_40 colorBlack">智能硬件产品</h1>
+            <p class="marginB_40">物联网 (IoT)始于“物”（即设备）。构建您的设备（从添加传感器到创建智能设备），才能启动您的 IoT 解决方案。我们提供如下产品</p>
             <Row type="flex"  justify="center"  class="code-row-bg marginTB_40":gutter="16">
                 <Col class="marginB_20" :xs="12" :sm="8" :md="4" :lg="4" v-for="(Hardware,Idx) in HardwareList">
                     <div class="SingleImg">
@@ -34,9 +63,11 @@
             </Row>
         </div>
 
-        <div class="OneBlock">
-            <h2 class="marginTB_20">ODM</h2>
-            <h2 class="">为你的传统电器，插上智能的“翅膀”</h2>
+        <div class="LineBlock"></div>
+
+        <div class="TelescopicBlock">
+            <h1 class="marginTB_40 colorBlack">ODM</h1>
+            <p class="marginB_40">为你的传统电器，插上智能的“翅膀”</p>
             <div class="TextCenter SingleImg">
                 <img src="static/img/Icon/SmartHox_Products_icon13.png">
             </div>
@@ -53,9 +84,9 @@
     data: function () {
       return {
         BlockInfo:[
-            {'title':'智能网关','slogan':'Hox ONE','content':'','img':'static/img/Icon/Products/SmartHox_Products_icon1.png',},
-            {'title':'嵌入式联网模块','slogan':'','content':'','img':'static/img/Icon/Products/SmartHox_Products_icon2.png',},
-            {'title':'无线接入模块','slogan':'','content':'','img':'static/img/Icon/Products/SmartHox_Products_icon3.png',},
+            {'title':'智能网关','slogan':'Hox ONE','content':'Hox ONE','img':'static/img/SmartHox/picture/vmw-spotlight-promo-app-defense.jpg','icon':'fa fa-inbox'},
+            {'title':'嵌入式联网模块','slogan':'','content':'','img':'static/img/SmartHox/picture/vmw-promo-pks3.jpg','icon':'fa fa-exchange'},
+            {'title':'无线接入模块','slogan':'','content':'','img':'static/img/SmartHox/picture/vmware-hero-bc-who-we-are.jpg','icon':'fa fa-rss '},
         ],
         HardwareList:[
             {'name':'智能网关','img':'static/img/Icon/SmartHox_Products_icon7.png'},

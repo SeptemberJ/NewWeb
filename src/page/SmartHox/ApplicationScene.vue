@@ -1,17 +1,6 @@
 <template>
     <div class="ApplicationScene">
-        <!-- banner -->
-       <!--  <Carousel v-model="value2" dots="none" arrow="never">
-            <CarouselItem>
-                <div class="demo-carousel">
-                    <img style="width: 100%;"  src="static/img/Banner/SmartHox_banner1.png">
-                </div>
-            </CarouselItem>
-        </Carousel> -->
         <img  style="width: 100%;"  src="static/img/Banner/SmartHox_banner2.png">
-        <!-- <img v-if="CurTab == '智慧工业'" style="width: 100%;"  src="static/img/Banner/banner_industry.png">
-        <img v-if="CurTab == '智慧酒店'" style="width: 100%;"  src="static/img/Banner/banner_hotel.png"> -->
-        <!-- tab -->
         <div class="TabHead">
             <span v-for="(Tab,Idx) in TabHeadList" :class="{'CursorPointer':true,'tabActive':CurTab == Tab}" @click="ChangeTab(Tab)">{{Tab}}</span>
         </div>

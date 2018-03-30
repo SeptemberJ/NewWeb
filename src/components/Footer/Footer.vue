@@ -56,9 +56,13 @@
   padding: 40px 20px;
   color: #fff;
   text-align: left;
+  background-color: #2c2d32;
+  /*
   background-color: rgb(89,89,89);
+  */
   p{
-    font-size: 12px;
+    font-size: 12px !important; 
+    color: #bcbcbe;
   }
 }
 </style>

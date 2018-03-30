@@ -1,48 +1,74 @@
 <template>
     <div class="SmartHox_home">
         <!-- Carousel -->
-        <Carousel/>
-        <!--  -->
-        <div class="BlockOuter">
-            <h5>物联网一站式纵向服务</h5>
-            <p>Smart Hox 作为物联网行业极具创新能力的IoT云平台，为企业提供进入物联网必需的设备接入、设备控制、数据分析、供应链资源一站式服务，助力企业智造转型，并为其在物联网时代打造新商业模式。</p>
-            <Row  type="flex"  justify="center"  class="code-row-bg marginTB_40 TextCenter" :gutter="16">
-
-                <Col class="marginB_10" :xs="24" :sm="12" :md="6"  :lg="6" v-for="(Block,Idx) in BlockInfo">
-                  <img class="marginB_20" :src="Block.img"/>
-                  <h5 class="Bold TextLeft marginTB_20">{{Block.title}}</h5>
-                  <p class="TextLeft">{{Block.content}}</p>
-                </Col>
-            </Row>
+        <Carousels/>
+        <!--FourBlock  -->
+        <div class="TelescopicBlock tab-home">
+            <h2 class="marginTB_40 TextCenter">物联网一站式纵向服务</h2>
+            <p class="marginB_40 TextCenter PaddingLR_20">Smart Hox 作为物联网行业极具创新能力的IoT云平台，为企业提供进入物联网必需的设备接入、设备控制、数据分析、供应链资源一站式服务，助力企业智造转型，并为其在物联网时代打造新商业模式。</p>
+          <Row type="flex" justify="space-between" class="code-row-bg" :gutter="16">
+                  <Col :xs="24" :sm="24" :md="12" :lg="12" v-for="(Block,Idx) in BlockInfo" class="marginB_10">
+                      <div class="thumb-container  singleLineEllipse">
+                          <div class="thumb-img"  :style="{'background-image':'url(' + Block.img +')'}">
+                                      </div>
+                          <div class="thumb-details showHam" >
+                              <div class="col-xs-1 col-md-1 col-sm-1" style="height: 86px;">
+                                  <i :class="[Block.icon]"></i>
+                              </div>
+                              <div class="col-xs-10 col-md-10 col-sm-10" style="height: 86px;">
+                                  <div class="detail-content clamp">
+                                      <h3 class="clampingDetail" data-id="randomId7643" style="">
+                                      <span class="asianLang" style="width: 100%">{{Block.title}}</span>
+                                      </h3>
+                                      <p class="clampingDetail" data-id="randomId9455" style="">
+                                      <span class="asianLang" style="width: 200px">{{Block.content}}</span>
+                                      </p>
+                                  </div>
+                              </div>
+                              <div class="col-xs-1 col-md-1 col-sm-1 cntClk" style="height: 86px;">   <i class="fa fa-bars detail-toggle"></i>
+                              </div>
+                              <div class="social-block">
+                              </div>
+                          </div>
+                      </div>
+                  </Col>
+              </Row>
         </div>
+
+        <div class="LineBlock"></div>
         <!-- tab1 -->
         <div class="BlockOuter">
           <h2 class="TextCenter">Smart Hox 可以为企业提供智能化服务</h2>
-          <div class="marginTB_40">
-            <Row class="TextCenter">
-                <Col v-for="(Tab,Idx) in TabMenu_Product" span="8" :class="{'Active':Cur_Product == Tab.name}">
-                  <span class="CursorPointer Padding_10"  @click="ChangeTab_Product(Tab.name)">
-                    <Icon :size="24" color="#000" :type="Tab.icon"></Icon>
-                    <p>{{Tab.name}}</p>
-                  </span>
-                </Col>
-            </Row>
-            <div>
-                <Household v-if="Cur_Product === '智能家电'"/>
-                <Light v-if="Cur_Product === '智慧照明'"/>
-                <Industry v-if="Cur_Product === '智慧工控'"/>
-            </div>
+          <Carousel v-model="Cur_Carousel" arrow="always" loop :autoplay="false">
+              <CarouselItem>
+                  <div class="demo-carousel">
+                    <Household/>
+                  </div>
+              </CarouselItem>
+              <CarouselItem>
+                  <div class="demo-carousel">
+                    <Light/>
+                  </div>
+              </CarouselItem>
+              <CarouselItem>
+                  <div class="demo-carousel">
+                    <Industry/>
+                  </div>
+              </CarouselItem>
+          </Carousel>
           </div>
-        </div>
+
+        <div class="LineBlock"></div>
         <!-- tab2 -->
-        <div class="BlockOuter">
-          <h2 class="TextCenter">与Smart Hox 合作对接流程</h2>
+        <TabCarousel/>
+        <!-- <div class="BlockOuter">
+          <h1 class="TextCenter">与Smart Hox 合作对接流程</h1>
           <div class="marginTB_40">
             <Row style="height: 60px;" type="flex" justify="space-between" class="TextCenter">
                 <Col v-for="(Tab,Idx) in TabMenu_Docking" span="4" :class="{'Active':Cur_Docking == Tab.name}">
                   <span class="CursorPointer Padding_10"  @click="ChangeTab_Docking(Tab.name)">
-                    <Icon :size="24" color="#000" :type="Tab.icon"></Icon>
-                    <p>{{Tab.name}}</p>
+                    <Icon :size="24" :class="{'ActiveIcon':Cur_Docking == Tab.name}" :type="Tab.icon"></Icon>
+                    <p :class="{'TabP':true,'ActiveP':Cur_Docking == Tab.name}">{{Tab.name}}</p>
                   </span>
                 </Col>
             </Row>
@@ -73,18 +99,20 @@
               
             </div>
           </div>
-        </div>
-        <!--  -->
+        </div> -->
+        
     </div>
 </template>
 <script>
-import Carousel from '../../components/Carousel/Carousel'
+import Carousels from '../../components/Carousel/Carousel'
 import Household from '../../components/SmartHox/Tab/Home/Household'
 import Light from '../../components/SmartHox/Tab/Home/Light'
 import Industry from '../../components/SmartHox/Tab/Home/Industry'
+import TabCarousel from '../../components/TabCarousel/TabCarousel.vue'
   export default{
     data: function () {
       return {
+        Cur_Carousel:0,
         Cur_Product:'智能家电',
         Cur_Docking:'需求洽谈',
         TabMenu_Product:[{'name':'智能家电','icon':'ios-monitor'},{'name':'智慧照明','icon':'ios-lightbulb'},{'name':'智慧工控','icon':'ios-game-controller-b'}],
@@ -96,10 +124,10 @@ import Industry from '../../components/SmartHox/Tab/Home/Industry'
           {'name':'生产上线','icon':'ios-world','customerDo':[''],'smartHoxDo':['全面部署']}
         ],
         BlockInfo:[
-          {'title':'构建设备','content':'物联网 (IoT)始于“物”（即设备）。构建您的设备（从添加传感器到创建智能设备），才能启动您的 IoT 解决方案。','img':'static/img/Icon/Home/SmartHox_Home_icon1.png'},
-          {'title':'控制您的设备','content':'部署控制、监控和管理您的设备的 IoT 解决方案，从而允许您捕获实时数据。','img':'static/img/Icon/Home/SmartHox_Home_icon14.png'},
-          {'title':'分析数据','content':'利用您收集的数据并应用高级分析以揭示新业务见解。','img':'static/img/Icon/Home/SmartHox_Home_icon2.png'},
-          {'title':'针对见解采取措施','content':'通过功能强大的应用程序将见解转变为行动，从而创造新的收入和业务机会。','img':'static/img/Icon/Home/SmartHox_Home_icon13.png'},
+          {'title':'构建设备','content':'物联网 (IoT)始于“物”（即设备）。构建您的设备（从添加传感器到创建智能设备），才能启动您的 IoT 解决方案。','img':'static/img/SmartHox/picture/upper-half-promo-4-workspaceone.jpg','icon':'fa fa-gears'},
+          {'title':'控制您的设备','content':'部署控制、监控和管理您的设备的 IoT 解决方案，从而允许您捕获实时数据。','img':'static/img/SmartHox/picture/1511945768395.jpg','icon':'fa fa-laptop'},
+          {'title':'分析数据','content':'利用您收集的数据并应用高级分析以揭示新业务见解。','img':'static/img/SmartHox/picture/oms-img1.jpg','icon':'fa fa-signal'},
+          {'title':'针对见解采取措施','content':'通过功能强大的应用程序将见解转变为行动，从而创造新的收入和业务机会。','img':'static/img/SmartHox/picture/asset-img1.jpg','icon':'fa fa-terminal'},
         ]
       }
     },
@@ -116,10 +144,11 @@ import Industry from '../../components/SmartHox/Tab/Home/Industry'
       
     },
     components: {
-      Carousel,
+      Carousels,
       Household,
       Light,
-      Industry
+      Industry,
+      TabCarousel
       
 
     },
@@ -130,6 +159,10 @@ import Industry from '../../components/SmartHox/Tab/Home/Industry'
         ChangeTab_Docking(Menu){
             this.Cur_Docking = Menu
         },
+        ChangeCarousel(oldValue,value){
+          console.log(oldValue + '---' +value)
+          this.Cur_Carousel = value
+        }
      
 
     }
@@ -137,6 +170,9 @@ import Industry from '../../components/SmartHox/Tab/Home/Industry'
 </script>
 <style lang="scss" scoped>
 .SmartHox_home{
+    .TelescopicBlock{
+      padding: 10px;
+    }
     .BlockOuter{
         padding: 20px 20px;
         .mu-tabs{
@@ -170,7 +206,13 @@ import Industry from '../../components/SmartHox/Tab/Home/Industry'
         height: 15px;
     }
     .Active{
-        border-bottom:2px solid red !important;
+        border-bottom:2px solid #F58733 !important;
+    }
+    .ActiveIcon{
+      color: #F58733;
+    }
+    .ActiveP{
+      color: #F58733;
     }
     img{
         max-width: 100% !important;

@@ -1,6 +1,8 @@
 <template>
    <!--carousel-->
 <div class="par parsys">
+    <div class="LineBlock"></div>
+    
     <div class="heroCarousel section">
       <div class="herocarouseltransitionValue" transitionvalue="5"></div>
       <div class="herocarouseltransitionOffOn" transitionoffon="transitionOn"></div>
@@ -79,9 +81,9 @@
       return {
         CurCarousel:0,
         CarouselList:[
-          {'img':'static/img/Banner/banner_home5.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
-          {'img':'static/img/Banner/banner_home3.png','tit_b':'IoT 数据云平台服务','tit_s':'智能、安全的平台','content':'更高效地协作'},
-          {'img':'static/img/Banner/banner_home2.png','tit_b':'物联网接入网关-Hox One','tit_s':'MANUFACTURING EXECUTION SYSTEM','content':'物联网解决方案提供商[构造数字化工厂  实现智能制造]'}
+          {'img':'static/img/Banner/SmartHox_banner1.png','tit_b':'全系列物联网接入网关','tit_s':'','content':'Smart Hox 打通物联网多协议连接，让万物互联真正融入工作和生活的每个场景，全面支持Wi-Fi、GPRS/3G/4G、ZigBee、RS485、Modbus、蓝牙、RF433、 2.4G 、Z-Wave、CAN等终端接入技术，广泛应用于各类物联网设备。'},
+          {'img':'static/img/Banner/banner_home4.jpg','tit_b':'IoT 数据云平台服务','tit_s':'','content':'Smart Hox 作为物联网行业极具创新能力的IoT云平台，为企业提供进入物联网必需的设备接入、设备控制、数据分析、供应链资源一站式服务，助力企业智造转型，并为其在物联网时代打造新商业模式。'},
+          {'img':'static/img/Banner/banner_home5.jpg','tit_b':'物联网接入网关-Hox One','tit_s':'','content':'物联网解决方案提供商[构造数字化工厂  实现智能制造]'}
         ]
       }
     },
@@ -128,5 +130,10 @@
 <style lang="scss">
 .section-custom{
   margin: 0px !important;
+}
+.LineBlock{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right,#aadb1e 0,#006a91 100%);
 }
 </style>
