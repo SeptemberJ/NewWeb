@@ -42,7 +42,9 @@ h1{
 	font-size: 14px !important; 
 	color: #6a7986 !important; 
 }
-
+.TelescopicBlock{
+      padding: 10px 40px;
+    }
 .LineBlock{
   width: 100%;
   height: 5px;

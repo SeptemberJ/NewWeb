@@ -102,7 +102,7 @@
 </script>
 <style lang="scss">
 .DeviceAccess{
-    margin: 40px 20px;
+    margin: 40px 0px;
     .SingleImg img{
         max-width: 95%;
     }
